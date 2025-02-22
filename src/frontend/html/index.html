@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#1e7bbf">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- Título de la ventana -->
+        <title>Gradiant | CompetenciApp</title>
+
+        <!-- Archivos CSS -->
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/options.css">
+        <link rel="stylesheet" href="../css/buttons.css">
+
+        <!-- Incluir Font Awesome desde CDN -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="../resources/images/GradiantLogo.png" alt="Logo de Gradiant">
+            <h1>HackUdc 2025: CompetenciApp</h1>
+        </header>
+        <main>
+            <div id="options">
+                <div id="search">
+                    <div id="search1">
+                        <select name="tableselector" id ="tableselector">
+                            <option value="0" selected>Buscar por ...</option>
+                            <option value="1">Personas</option>
+                            <option value="2">Competencias</option>
+                            <option value="3">Soluciones</option>
+                        </select>
+                        <button type="submit">Buscar</button>
+                    </div>
+                    <input type = "string" id = "name", name = "name">
+                    <br>
+                    <input type = "string" id = "surname1", surname1 = "name">
+
+
+                    </input>
+                </div>
+                <div id="actions">
+                    <button type="submit" class="actionbutton" id="actionbutton1">
+                        <i class="fas fa-plus"></i>
+                        Añadir
+                    </button type="submit" class="actionbutton" id="actionbutton2">
+                    <button type="submit" class="actionbutton" id="actionbutton3">
+                        <i class="fas fa-pencil"></i>
+                        Editar
+                    </button>
+                </div>
+            </div>
+            <div id="data">
+                <table>
+                </table>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

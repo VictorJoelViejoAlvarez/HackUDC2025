@@ -1,0 +1,16 @@
+/* Fuente de texto */
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('../resources/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'JetBrainsMono', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+main {
+    margin: 1em;
+}

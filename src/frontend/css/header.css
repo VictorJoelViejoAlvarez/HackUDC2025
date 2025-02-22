@@ -1,0 +1,16 @@
+header {
+    border-bottom: 2px solid #ff1923;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+header img {
+    width: 10%;
+}
+
+header h1 {
+    translate: 60%;
+    font-size: 30px;
+}
