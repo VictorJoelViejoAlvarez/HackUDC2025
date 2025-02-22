@@ -12,7 +12,7 @@
         <!-- Archivos CSS -->
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/options.css">
+        <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/buttons.css">
 
         <!-- Incluir Font Awesome desde CDN -->
@@ -33,28 +33,45 @@
                             <option value="2">Competencias</option>
                             <option value="3">Soluciones</option>
                         </select>
-                        <button type="submit">Buscar</button>
+                        <button class="searchbutton" type="submit">Buscar</button>
                     </div>
-                    <input type = "string" id = "name", name = "name">
-                    <br>
-                    <input type = "string" id = "surname1", surname1 = "name">
+                    <form action="">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        <input type="text" id="apellido1" name="apellido1" placeholder="Apellido 1">
+                        <input type="text" id="apellido2" name="apellido2" placeholder="Apellido 2">
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico">
+                        <select name="esempleado" id="esempleado">
+                            <option value="0" selected>¿Es empleado?</option>
+                            <option value="1">Si</option>
+                            <option value="2">No</option>
+                        </select>
+                    </form>
 
-
-                    </input>
                 </div>
                 <div id="actions">
                     <button type="submit" class="actionbutton" id="actionbutton1">
                         <i class="fas fa-plus"></i>
-                        Añadir
                     </button type="submit" class="actionbutton" id="actionbutton2">
                     <button type="submit" class="actionbutton" id="actionbutton3">
                         <i class="fas fa-pencil"></i>
-                        Editar
                     </button>
                 </div>
             </div>
-            <div id="data">
-                <table>
+            <div id="data" class="div-table">
+                <table id="table-1">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellido 1</th>
+                            <th>Apellido 2</th>
+                            <th>Empleado</th>
+                            <th>Telefono</th>
+                            <th>E-mail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
                 </table>
             </div>
         </main>

@@ -1,0 +1,56 @@
+main #options {
+    display: flex;
+    justify-content: space-between;
+}
+
+main #data {
+    margin-top: 2em;
+}
+
+main #options #search #search1 {
+    margin-bottom: 0.5em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+
+/** Filas y columnas de la tabla **/
+table tr, td {
+    border: 1px solid rgb(35, 161, 45); /* Bordes de las celdas */
+    padding: 8px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+}
+
+/** Encabezados de la tabla **/
+table th {
+    background-color: lightgreen; /* Fondo del encabezado */
+    border: 1px solid green; /* Borde de las celdas */
+    border-bottom: 2px solid black; /* Borde inferior de las celdas */
+    padding: 10px 15px; /* Añadir margen interno para separar el texto del borde */
+}
+
+.div-table {
+    overflow: auto; /* Scroll horizontal y vertical */
+    width: 100%;
+}
+
+#tableselector {
+    background-color: white;
+    border-radius: 30%;
+    border: 5px solid #ff1923;
+    color: #ff1923;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+#tableselector:hover {
+    background-color: #ff1923;
+    border-radius: 10%;
+    border: 5px solid #ff1923;
+    color: white;
+}
