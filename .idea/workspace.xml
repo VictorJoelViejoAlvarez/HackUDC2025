@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17cc43d7-31d8-49b4-bf93-a6e83d59f111" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/sql/CreateTablesSQL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentación/.$EsquemaBDR.drawio.bkp" beforeDir="false" afterPath="$PROJECT_DIR$/Documentación/.$EsquemaBDR.drawio.bkp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentación/EsquemaBDR.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Documentación/EsquemaBDR.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentación/EsquemaBDR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Documentación/EsquemaBDR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
