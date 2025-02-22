@@ -1,3 +1,5 @@
+import * as model from './model.js';
+
 document.addEventListener("DOMContentLoaded", function () {
     const table = document.getElementById("data");
     const formFields = document.getElementById("form2");
@@ -10,8 +12,44 @@ document.addEventListener("DOMContentLoaded", function () {
     formFields.style.display = "none";
 
     // Mostrar tabla cuando se presiona el botón buscar
-    searchButton.addEventListener("click", function (event) {
+    searchButton.addEventListener("click", async function (event) {
         event.preventDefault(); // Evitar el envío del formulario
+
+        const nombre = nameInput.value.trim();
+
+        data;
+        if (!nombre) {
+            data = await model.listarPersonas();
+        }
+        else {
+            data = await model.listarPersonasPorNombre(nombre);
+        }
+
+        const tableBody = document.querySelector("#table-1 tbody");
+
+        tableBody.innerHTML = "";
+        // Llenar la tabla con los resultados
+        if (data && data.length > 0) {
+            data.forEach(persona => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${persona.id}</td>
+                    <td>${persona.nombre}</td>
+                    <td>${persona.apellido1}</td>
+                    <td>${persona.apellido2}</td>
+                    <td>${persona.empleado ? 'Sí' : 'No'}</td>
+                    <td>${persona.telefono}</td>
+                    <td>${persona.email}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        } else {
+            const row = document.createElement('tr');
+            row.innerHTML = `<td colspan="7">No se encontraron resultados</td>`;
+            tableBody.appendChild(row);
+        }
+
+        // Mostrar la tabla
         table.style.display = "block";
     });
 

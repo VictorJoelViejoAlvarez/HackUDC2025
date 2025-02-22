@@ -1,5 +1,5 @@
 // apiService.js
-const API_URL = 'https://localhost:8000'; // URL base de tu API
+const API_URL = 'http://localhost:8000'; // URL base de tu API
 
 // Función para obtener personas por nombre
 export const getPeopleData = async (nombre) => {

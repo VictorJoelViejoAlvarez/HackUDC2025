@@ -24,18 +24,18 @@ class CompetenciaEmpleado(SQLModel, table=True):
     obtencion: str
     verificado: bool
 
-class Problema(SQLModel, table=true):
+class Problema(SQLModel, table=True):
     id: int = Field(primary_key=True)
     problema: str
     descripcion: str
     competencia_id: int
 
-class Solucion(SQLModel, table=true):
+class Solucion(SQLModel, table=True):
     id: int = Field(primary_key=True)
     problema_id: int
     fecha: float
     ruta_documentacion: str
 
-class Autor(SQLModel, table=true):
+class Autor(SQLModel, table=True):
     persona_id: int = Field(primary_key=True)
     solucion_id: int = Field(primary_key=True)

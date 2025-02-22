@@ -2,13 +2,7 @@ from fastapi import APIRouter, Depends
 from sqlmodel import Session
 from database import get_db
 from models import Persona
-from services import (
-    crear_persona,
-    obtener_personas,
-    obtener_persona_por_id,
-    actualizar_persona,
-    eliminar_persona
-)
+from services import *
 
 router = APIRouter()
 
@@ -20,7 +14,7 @@ def crear(persona: Persona, session: Session = Depends(get_db)):
 def listar(session: Session = Depends(get_db)):
     return obtener_personas(session)
 
-@router.get("/personas/", response_model=list[Persona])
+@router.get("/personas/nombres/", response_model=list[Persona])
 def obtener_por_nombre(nombre: str, session: Session = Depends(get_db)):
     return obtener_personas_por_nombre(nombre, session)
 

@@ -2,6 +2,7 @@ from sqlmodel import Session, select
 from fastapi import HTTPException
 from models import Persona
 from models import Categoria
+from models import Competencia
 
 # -----------------------------------------------------------------------------
 
@@ -94,3 +95,37 @@ def eliminar_categoria(categoria_id: int, session: Session):
     
 # -----------------------------------------------------------------------------
 
+def crear_competencia(competencia: Competencia, session: Session):
+    session.add(competencia)
+    session.commit()
+    session.refresh(competencia)
+    return competencia
+
+def obtener_competencia_por_id(competencia_id: int, session: Session):
+    competencia = session.get(Competencia, competencia_id)
+    if not competencia:
+        raise HTTPException(status_code=404, detail="Competencia no encontrada")
+    return competencia
+
+def actualizar_competencia(competencia_id: int, competencia_data: Competencia, session: Session):
+    competencia = session.get(Competencia, competencia_id)
+    if not competencia:
+        raise HTTPException(status_code=404, detail="Competencia no encontrada")
+
+    # Actualizar solo los campos modificados
+    for field, value in competencia_data.dict(exclude_unset=True).items():
+        setattr(competencia, field, value)
+
+    session.commit()
+    session.refresh(competencia)
+    return competencia
+
+def eliminar_competencia(competencia_id: int, session: Session):
+    competencia = session.get(Competencia, competencia_id)
+    if not competencia:
+        raise HTTPException(status_code=404, detail="Competencia no encontrada")
+    session.delete(competencia)
+    session.commit()
+    return {"message": "Competencia eliminada correctamente"}
+    
+# -----------------------------------------------------------------------------
