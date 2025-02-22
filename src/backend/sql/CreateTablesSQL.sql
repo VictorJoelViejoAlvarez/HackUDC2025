@@ -34,20 +34,33 @@ CREATE TABLE Competencia (
 CREATE TABLE CompetenciaEmpleado(
     empleadoId BIGINT NOT NULL,
     competenciaId BIGINT NOT NULL,
-    obtencion VARCHAR(300) NOT NULL,
+    obtencion TEXT NOT NULL,
     CONSTRAINT pk_empleadoId_competenciaId PRIMARY KEY (empleadoId, categoriaId)
     CONSTRAINT fk_empleadoId FOREIGN KEY (empleadoId) REFERENCES Persona(id) ON DELETE CASCADE
     CONSTRAINT fk_competenciaId FOREIGN KEY (competenciaId) REFERENCES Competencia(id) ON DELETE CASCADE
 )
 
 CREATE TABLE Problema(
-
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    problema TEXT NOT NULL,
+    descripcion TEXT NOT NULL,
+    competenciaId BIGINT NOT NULL,
+    CONSTRAINT pk_id PRIMARY KEY (id)
+    CONSTRAINT fk_competenciaId FOREIGN KEY (competenciaId) REFERENCES Competencia(id) ON DELETE CASCADE
 )
 
 CREATE TABLE Solucion(
-
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    problemaId BIGINT NOT NULL,
+    fecha DATETIME NOT NULL,
+    rutaDocumentacion TEXT NOT NULL,
+    CONSTRAINT pk_id PRIMARY KEY (id),
+    CONSTRAINT fk_problemaId FOREIGN KEY (problemaId) REFERENCES Problema(id) ON DELETE CASCADE
 )
 
 CREATE TABLE Autor(
-
+    personaId BIGINT NOT NULL,
+    solucionId BIGINT NOT NULL,
+    CONSTRAINT fk_personaId FOREIGN KEY (personaId) REFERENCES Persona(id) ON DELETE CASCADE,
+    CONSTRAINT fk_solucionId FOREIGN KEY (solucionId) REFERENCES Solucion(id) ON DELETE CASCADE
 )
