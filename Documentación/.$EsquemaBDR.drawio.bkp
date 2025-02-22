@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9">
   <diagram name="Página-1" id="r680a2kSxSQnS_c1aFRB">
-    <mxGraphModel dx="2760" dy="2126" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="1880" dy="1563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,7 +10,7 @@
         <mxCell id="TEnRy6ez4rsZKCmlb2lD-3" value="&lt;b&gt;CompetenciasEmpleado&lt;/b&gt; (&lt;u&gt;empleadoId&lt;/u&gt;, &lt;u&gt;competenciaId&lt;/u&gt;, obtención)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="280" y="240" width="600" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="TEnRy6ez4rsZKCmlb2lD-5" value="&lt;b&gt;Competencias&lt;/b&gt; (&lt;u&gt;id&lt;/u&gt;, competencia, categoriaId)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
+        <mxCell id="TEnRy6ez4rsZKCmlb2lD-5" value="&lt;b&gt;Competencia&lt;/b&gt;&amp;nbsp;(&lt;u&gt;id&lt;/u&gt;, competencia, categoriaId)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="800" y="120" width="440" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TEnRy6ez4rsZKCmlb2lD-8" value="&lt;b&gt;Categoria&lt;/b&gt; (&lt;u&gt;id&lt;/u&gt;, categoria)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
@@ -49,8 +49,8 @@
         <mxCell id="TEnRy6ez4rsZKCmlb2lD-15" value="&lt;b&gt;Problema&lt;/b&gt;&amp;nbsp;(&lt;u&gt;id&lt;/u&gt;, problema, descripción, competenciaId)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="720" y="-40" width="520" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="TEnRy6ez4rsZKCmlb2lD-16" value="&lt;b&gt;Solucion&lt;/b&gt;&amp;nbsp;(&lt;u&gt;id&lt;/u&gt;, problemaId, rutaDocumentacion)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="280" y="-40" width="440" height="40" as="geometry" />
+        <mxCell id="TEnRy6ez4rsZKCmlb2lD-16" value="&lt;b&gt;Solucion&lt;/b&gt;&amp;nbsp;(&lt;u&gt;id&lt;/u&gt;, problemaId, fecha, rutaDocumentacion)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
+          <mxGeometry x="240" y="-40" width="480" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TEnRy6ez4rsZKCmlb2lD-17" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.42;exitY=0.989;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.259;entryY=0.99;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="TEnRy6ez4rsZKCmlb2lD-16" target="TEnRy6ez4rsZKCmlb2lD-15" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -78,15 +78,15 @@
           <mxGeometry y="-160" width="640" height="80" as="geometry" />
         </mxCell>
         <mxCell id="TEnRy6ez4rsZKCmlb2lD-25" value="&lt;b&gt;Autor&lt;/b&gt;&amp;nbsp;(&lt;u&gt;personaId&lt;/u&gt;, &lt;u&gt;solucionId&lt;/u&gt;)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry y="-40" width="280" height="40" as="geometry" />
+          <mxGeometry x="-80" y="-40" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TEnRy6ez4rsZKCmlb2lD-26" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=0.171;entryY=0.021;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.428;exitY=0.983;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="TEnRy6ez4rsZKCmlb2lD-25" target="TEnRy6ez4rsZKCmlb2lD-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-40" y="70" as="sourcePoint" />
             <mxPoint x="40" y="30" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="140" y="50" />
-              <mxPoint x="210" y="70" />
+              <mxPoint x="70" y="60" />
+              <mxPoint x="200" y="80" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -95,13 +95,10 @@
             <mxPoint x="390" y="90" as="sourcePoint" />
             <mxPoint x="440" y="40" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="250" y="30" />
+              <mxPoint x="180" y="40" />
               <mxPoint x="360" y="30" />
             </Array>
           </mxGeometry>
-        </mxCell>
-        <mxCell id="viWSc4g2LNVz1voUYzHQ-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=3;" vertex="1" parent="1">
-          <mxGeometry x="-40" y="-200" width="1320" height="520" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
