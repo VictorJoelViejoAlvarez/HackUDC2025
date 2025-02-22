@@ -9,12 +9,12 @@ def gerror(e):
 
 # Persona ---------------------------------------------------------------------
 
-def insertPersona(connection, nombre, apellido1, apellido2, telefono, email):
+def insertPersona(connection, nombre, apellido1, apellido2, empleado, telefono, email):
     with connection.cursor() as cur:
         try:
             cur.execute(
-                "insert into persona (nombre, apellido1, apellido2, telefono, email) values (%s, %s, %s, %s, %s);",
-                (nombre, apellido1, apellido2, telefono, email)
+                "insert into persona (nombre, apellido1, apellido2, empleado, telefono, email) values (%s, %s, %s, %s, %s, %s);",
+                (nombre, apellido1, apellido2, empleado, telefono, email)
             )
             connection.commit() # Confirmar cambios
             return True
