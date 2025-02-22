@@ -1,8 +1,6 @@
 from sqlmodel import Session, select
 from fastapi import HTTPException
-from models import Persona
-from models import Categoria
-from models import Competencia
+from models import *
 
 # -----------------------------------------------------------------------------
 
@@ -66,6 +64,11 @@ def crear_categoria(categoria: Categoria, session: Session):
     session.refresh(categoria)
     return categoria
 
+def obtener_categorias(session: Session):
+    query = select(Categoria)
+    categorias = session.exec(query).all()
+    return categorias
+
 def obtener_categoria_por_id(categoria_id: int, session: Session):
     categoria = session.get(Categoria, categoria_id)
     if not categoria:
@@ -101,6 +104,11 @@ def crear_competencia(competencia: Competencia, session: Session):
     session.refresh(competencia)
     return competencia
 
+def obtener_competencias(session: Session):
+    query = select(Competencia)
+    competencias = session.exec(query).all()
+    return competencias
+
 def obtener_competencia_por_id(competencia_id: int, session: Session):
     competencia = session.get(Competencia, competencia_id)
     if not competencia:
@@ -129,3 +137,26 @@ def eliminar_competencia(competencia_id: int, session: Session):
     return {"message": "Competencia eliminada correctamente"}
     
 # -----------------------------------------------------------------------------
+
+def obtener_competencias_empleado(session: Session):
+    query = select(CompetenciaEmpleado)
+    competencias_empleado = session.exec(query).all()
+    return competencias_empleado
+    
+
+def obtener_problemas(session: Session):
+    query = select(Problema)
+    problemas = session.exec(query).all()
+    return problemas
+
+
+def obtener_soluciones(session: Session):
+    query = select(Solución)
+    soluciones = session.exec(query).all()
+    return soluciones
+
+
+def obtener_autores(session: Session):
+    query = select(Autor)
+    autores = session.exec(query).all()
+    return autores

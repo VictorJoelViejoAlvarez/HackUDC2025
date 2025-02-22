@@ -14,11 +14,11 @@ def crear(persona: Persona, session: Session = Depends(get_db)):
 def listar(session: Session = Depends(get_db)):
     return obtener_personas(session)
 
-@router.get("/personas/nombres/", response_model=list[Persona])
+@router.get("/personas/nombres/{persona_nombre}", response_model=list[Persona])
 def obtener_por_nombre(nombre: str, session: Session = Depends(get_db)):
     return obtener_personas_por_nombre(nombre, session)
 
-@router.get("/personas/{persona_id}", response_model=Persona)
+@router.get("/personas/ids/{persona_id}", response_model=Persona)
 def obtener(persona_id: int, session: Session = Depends(get_db)):
     return obtener_persona_por_id(persona_id, session)
 

@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mostrar tabla cuando se presiona el botón buscar
     searchButton.addEventListener("click", async function (event) {
+        const tablePersona = document.getElementById("table-1");
+
         event.preventDefault(); // Evitar el envío del formulario
 
         const nombre = nameInput.value.trim();
@@ -69,4 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Exponer la función para obtener el nombre si es necesario
     window.getNombre = getNombre;
+
+    function showDisplay(item) {
+        item.style.display = 'block';
+    }
+
+    function hideDisplay(item) {
+        item.style.display = 'none';
+    }
 });
