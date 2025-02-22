@@ -35,6 +35,7 @@ CREATE TABLE CompetenciaEmpleado(
     empleadoId BIGINT NOT NULL,
     competenciaId BIGINT NOT NULL,
     obtencion TEXT NOT NULL,
+    verificado BOOLEAN NOT NULL DEFAULT FALSE,
     CONSTRAINT pk_empleadoId_competenciaId PRIMARY KEY (empleadoId, categoriaId)
     CONSTRAINT fk_empleadoId FOREIGN KEY (empleadoId) REFERENCES Persona(id) ON DELETE CASCADE
     CONSTRAINT fk_competenciaId FOREIGN KEY (competenciaId) REFERENCES Competencia(id) ON DELETE CASCADE
