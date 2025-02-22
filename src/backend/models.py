@@ -31,4 +31,11 @@ class Problema(SQLModel, table=true):
     competencia_id: int
 
 class Solucion(SQLModel, table=true):
-    id: int = Field(primary)
+    id: int = Field(primary_key=True)
+    problema_id: int
+    fecha: float
+    ruta_documentacion: str
+
+class Autor(SQLModel, table=true):
+    persona_id: int = Field(primary_key=True)
+    solucion_id: int = Field(primary_key=True)

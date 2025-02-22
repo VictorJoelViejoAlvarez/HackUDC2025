@@ -26,25 +26,27 @@
         <main>
             <div id="options">
                 <div id="search">
-                    <div id="search1">
-                        <select name="tableselector" id ="tableselector">
-                            <option value="0" selected>Buscar por ...</option>
-                            <option value="1">Personas</option>
-                            <option value="2">Competencias</option>
-                            <option value="3">Soluciones</option>
-                        </select>
-                        <button class="searchbutton" type="submit">Buscar</button>
-                    </div>
-                    <form action="">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                        <input type="text" id="apellido1" name="apellido1" placeholder="Apellido 1">
-                        <input type="text" id="apellido2" name="apellido2" placeholder="Apellido 2">
-                        <input type="email" id="email" name="email" placeholder="Correo Electrónico">
-                        <select name="esempleado" id="esempleado">
+                    <form id="formulario">
+                        <div id="form1">
+                            <button class="searchbutton" type="submit">Buscar</button>
+                            <select name="tableselector" id ="tableselector">
+                                <option value="0" selected>Buscar por ...</option>
+                                <option value="1">Personas</option>
+                                <option value="2">Competencias</option>
+                                <option value="3">Soluciones</option>
+                            </select>
+                        </div>
+                        <div id="form2">
+                            <input type="text" id="nombrePersona" name="nombrePersona" placeholder="Nombre">
+                            <input type="text" id="apellido1" name="apellido1" placeholder="Apellido 1">
+                            <input type="text" id="apellido2" name="apellido2" placeholder="Apellido 2">
+                            <input type="email" id="email" name="email" placeholder="Correo Electrónico">
+                            <select name="esempleado" id="esempleado">
                             <option value="0" selected>¿Es empleado?</option>
                             <option value="1">Si</option>
                             <option value="2">No</option>
                         </select>
+                        </div>
                     </form>
 
                 </div>
@@ -78,4 +80,7 @@
         <footer>
         </footer>
     </body>
+
+    <script src="../js/main.js"></script>
+
 </html>

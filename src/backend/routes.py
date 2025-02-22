@@ -20,6 +20,10 @@ def crear(persona: Persona, session: Session = Depends(get_db)):
 def listar(session: Session = Depends(get_db)):
     return obtener_personas(session)
 
+@router.get("/personas/", response_model=list[Persona])
+def obtener_por_nombre(nombre: str, session: Session = Depends(get_db)):
+    return obtener_personas_por_nombre(nombre, session)
+
 @router.get("/personas/{persona_id}", response_model=Persona)
 def obtener(persona_id: int, session: Session = Depends(get_db)):
     return obtener_persona_por_id(persona_id, session)
@@ -31,3 +35,13 @@ def actualizar(persona_id: int, persona_data: Persona, session: Session = Depend
 @router.delete("/personas/{persona_id}")
 def eliminar(persona_id: int, session: Session = Depends(get_db)):
     return eliminar_persona(persona_id, session)
+
+#----------------------------------------------------------------------------------------------
+
+@router.post("/categorias/", response_model=Categoria)
+def crear(categoria: Categoria, session: Session = Depends(get_db)):
+    return crear_categoria(categoria, session)
+
+@router.get("/categorias/{categoria_id}", response_model=Categoria)
+def obtener(categoria_id: int, session: Session = Depends(get_db)):
+    return obtener_categoria_por_id(categoria_id, session)

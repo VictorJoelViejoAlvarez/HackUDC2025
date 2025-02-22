@@ -7,8 +7,13 @@ main #data {
     margin-top: 2em;
 }
 
-main #options #search #search1 {
+main #form1 {
+    display: flex;
     margin-bottom: 0.5em;
+}
+
+main #form1 #tableselector {
+    margin-left: 1em;
 }
 
 table {
