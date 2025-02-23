@@ -142,7 +142,7 @@ def obtener_competencias_empleado(session: Session):
     query = select(CompetenciaEmpleado)
     competencias_empleado = session.exec(query).all()
     return competencias_empleado
-    
+
 
 def obtener_problemas(session: Session):
     query = select(Problema)
@@ -151,7 +151,7 @@ def obtener_problemas(session: Session):
 
 
 def obtener_soluciones(session: Session):
-    query = select(Solución)
+    query = select(Solucion)
     soluciones = session.exec(query).all()
     return soluciones
 
