@@ -95,7 +95,7 @@ def eliminar_categoria(categoria_id: int, session: Session):
     session.delete(categoria)
     session.commit()
     return {"message": "Categoría eliminada correctamente"}
-    
+
 # -----------------------------------------------------------------------------
 
 def crear_competencia(competencia: Competencia, session: Session):
@@ -135,7 +135,7 @@ def eliminar_competencia(competencia_id: int, session: Session):
     session.delete(competencia)
     session.commit()
     return {"message": "Competencia eliminada correctamente"}
-    
+
 # -----------------------------------------------------------------------------
 
 def obtener_competencias_empleado(session: Session):
