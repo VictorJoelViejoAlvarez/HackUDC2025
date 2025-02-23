@@ -56,11 +56,11 @@ def obtener_competencias_de_empleado(session: Session = Depends(get_db)):
 def obtener(session: Session = Depends(get_db)):
     return obtener_problemas(session)
 
-@router.get("/solucion/", response_model= list[Solucion])
+@router.get("/soluciones/", response_model= list[Solucion])
 def obtener(session: Session = Depends(get_db)):
     return obtener_soluciones(session)
 
-@router.get("/autor/", response_model= list[Autor])
+@router.get("/autores/", response_model= list[Autor])
 def obtener(session: Session = Depends(get_db)):
     return obtener_autores(session)
 
