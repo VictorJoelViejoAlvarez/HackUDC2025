@@ -32,8 +32,12 @@
                             <select name="tableselector" id ="tableselector">
                                 <option value="0" selected>Buscar por ...</option>
                                 <option value="1">Personas</option>
-                                <option value="2">Competencias</option>
-                                <option value="3">Soluciones</option>
+                                <option value="2">Categorías</option>
+                                <option value="3">Competencias</option>
+                                <option value="4">CompetenciasEmpleado</option>
+                                <option value="5">Problema</option>
+                                <option value="6">Solución</option>
+                                <option value="7">Soluciones</option>
                             </select>
                         </div>
                         <div id="form2">
@@ -80,6 +84,62 @@
                         <tr>
                             <th>Id</th>
                             <th>Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <table class="Mytable" id="table-3">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Competencia</th>
+                            <th>CategoriaId</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <table class="Mytable" id="table-4">
+                    <thead>
+                        <tr>
+                            <th>EmpleadoId</th>
+                            <th>CompetenciaId</th>
+                            <th>Obtencion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <table class="Mytable" id="table-5">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Problema</th>
+                            <th>Descripcion</th>
+                            <th>CompetenciaId</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <table class="Mytable" id="table-6">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>ProblemaId</th>
+                            <th>Fecha</th>
+                            <th>RutaDocumentacion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <table class="Mytable" id="table-7">
+                    <thead>
+                        <tr>
+                            <th>PersonaId</th>
+                            <th>SolucionId</th>
                         </tr>
                     </thead>
                     <tbody>

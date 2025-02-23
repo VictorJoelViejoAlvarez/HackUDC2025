@@ -39,3 +39,28 @@ def crear(categoria: Categoria, session: Session = Depends(get_db)):
 @router.get("/categorias/{categoria_id}", response_model=Categoria)
 def obtener(categoria_id: int, session: Session = Depends(get_db)):
     return obtener_categoria_por_id(categoria_id, session)
+
+@router.get("/categorias/", response_model= list[Categoria])
+def obtener(session: Session = Depends(get_db)):
+    return obtener_categorias(session)
+
+@router.get("/competencias/", response_model= list[Competencia])
+def obtener(session: Session = Depends(get_db)):
+    return obtener_competencias(session)
+
+@router.get("/CompetenciaEmpleado/", response_model=list[CompetenciaEmpleado])
+def obtener_competencias_de_empleado(session: Session = Depends(get_db)):
+    return obtener_competencias_empleado(session)
+
+@router.get("/problemas/", response_model= list[Problema])
+def obtener(session: Session = Depends(get_db)):
+    return obtener_problemas(session)
+
+@router.get("/solucion/", response_model= list[Solucion])
+def obtener(session: Session = Depends(get_db)):
+    return obtener_soluciones(session)
+
+@router.get("/autor/", response_model= list[Autor])
+def obtener(session: Session = Depends(get_db)):
+    return obtener_autores(session)
+
